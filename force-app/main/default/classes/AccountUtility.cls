@@ -22,6 +22,7 @@ public with sharing class AccountUtility {
                     acc.Rating = 'Hot';}
                 }
             }
+            
         public static void afterInsert(List<Account> newAccounts) {
             List<Contact> contactsToInsert = new List<Contact>();
             for (Account acc : newAccounts) {
