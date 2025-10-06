@@ -1,8 +1,7 @@
-trigger OpportunityTrigger on Opportunity (before insert, after insert, after update) {
+trigger OpportunityTrigger on Opportunity (Before Insert ,Before Update , After Insert, After Update, Before Delete, After Delete) {
     switch on Trigger.operationType {
         when BEFORE_INSERT{
-            // call your before insert handler
-            
+            // call your before insert handler            
         }
         when BEFORE_UPDATE {
             // call your before update handler
@@ -17,7 +16,6 @@ trigger OpportunityTrigger on Opportunity (before insert, after insert, after up
         }
         when AFTER_UPDATE {
             // call your after update handler
-            OpportunityUtility.afterUpdate(Trigger.new, Trigger.old);
         }
         when AFTER_DELETE {
             // call your after delete handler
